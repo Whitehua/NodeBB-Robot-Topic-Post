@@ -55,8 +55,8 @@ cp .env.example .env
 `.env` introduction
 ```
 NODEBB_URL="place your nodebb website url. example:http://localhost:4567" 
-NODEBB_TOKEN="place your nodebb website token.uid need to set 0"
-OPENROUTER_API_KEY = "if you have openai compatible key,also need to replace openai website api at main.py #72 url = "https://openrouter.ai/api/v1/chat/completions" "
+NODEBB_TOKEN="place your nodebb website token"
+OPENROUTER_API_KEY = "example:sk-xxxxxxxx  if you have openai compatible key,also need to replace openai website api at main.py #72 url = "https://openrouter.ai/api/v1/chat/completions" "
 
 TARGET_CID=
 TARGET_UID=
@@ -75,9 +75,9 @@ python main.py
 
 登录 NodeBB 后台（ACP）。
 
-进入 插件 (Plugins) -> API Write (或者内置的 Web API)。
+进入 设置 (Settings) -> API  (或者内置的 Web API)。
 
-生成一个针对特定用户或管理员的 Token，并确保该用户拥有在指定 CID（板块）发帖的权限。
+生成一个针对管理员的 Token，将`user id` 设置为 0，确保该 token 可以模拟任何用户发帖，并确保该用户拥有在指定 CID（板块）发帖的权限。
 
 ## 🤝 贡献与反馈
 欢迎提交 Issue 或 Pull Request 来帮助改进这个项目！
